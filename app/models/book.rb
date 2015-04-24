@@ -19,7 +19,8 @@ message: "Only pdfs allowed"
 validates :image, attachment_presence: true
 validates :resource, attachment_presence: true
 
-validates_numericality_of :price
+validates_numericality_of :price,
 greater_than: 49, message: "must be at least 50 cents"
+
 end
 
